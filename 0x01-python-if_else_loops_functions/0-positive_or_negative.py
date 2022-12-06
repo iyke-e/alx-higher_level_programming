@@ -2,9 +2,9 @@
 import random
 number = random.randint(-10, 10)
 if number < 0:
-    statement = "is negative"
+    sign = "is negative"
 elif number > 0:
-    statement = "is positive"
+    sign = "is positive"
 else:
-    statement = "is zero"
-print(f"{number:d} {statement}")
+    sign = "is zero"
+print("{:d}".format(number), sign)
