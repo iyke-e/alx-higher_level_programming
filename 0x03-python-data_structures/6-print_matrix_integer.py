@@ -2,11 +2,15 @@
 
 
 def print_matrix_integer(matrix=[[]]):
-    """Print a matrix of integers."""
+    """
+    prints a matrix of integers to STDOUT
+    """
     for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-                print("{:d}".format(matrix[i][j]), end="")
-                if j != (len(matrix[i]) - 1):
-                    print(" ", end="")
-
+        subm_len = len(matrix[i])
+        for j in range(subm_len):
+            if j != subm_len - 1:
+                endCh = ' '
+            else:
+                endCh = ''
+            print("{:d}".format(matrix[i][j]), end=endCh)
         print("")
